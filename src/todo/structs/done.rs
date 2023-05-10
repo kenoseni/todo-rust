@@ -1,6 +1,11 @@
 use super::super::enums::TaskStatus;
 use super::base::Base;
 
+// import traits
+use super::super::traits::delete::Delete;
+use super::super::traits::edit::Edit;
+use super::super::traits::get::Get;
+
 pub struct Done {
     pub super_struct: Base,
 }
@@ -14,3 +19,7 @@ impl Done {
         return Done { super_struct: base };
     }
 }
+
+impl Get for Done {}
+impl Delete for Done {}
+impl Edit for Done {}
